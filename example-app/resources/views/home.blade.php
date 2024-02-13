@@ -3,66 +3,106 @@
 @section('title', 'Homepage')
 
 @section('content')
+    <style>
+        /* Custom form styles */
+        .custom-form {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .custom-form .card-header {
+            background-color: #343a40;
+            color: white;
+            border-bottom: 1px solid #343a40;
+            border-radius: 5px 5px 0 0;
+            padding: 10px 20px;
+        }
+
+        .custom-form .card-footer {
+            background-color: #343a40;
+            border-top: 1px solid #343a40;
+            border-radius: 0 0 5px 5px;
+            padding: 10px 20px;
+        }
+
+        /* Additional custom styles */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+
     <div class="card-header">
         <h3 class="card-title">SE-CAMP Form</h3>
     </div>
-    <form>
+    <form class="halloween-theme custom-form">
         <div class="card-body">
-            {{-- --Name-- --}}
+            {{-- Name --}}
             <div class="form-group">
-                <label>Name</label>
+                <label for="InputName">Name</label>
                 <input type="text" class="form-control" id="InputName" placeholder="Enter Name">
             </div>
-            {{-- --Surname-- --}}
+
+            {{-- Surname --}}
             <div class="form-group">
-                <label>Surname</label>
+                <label for="InputSurname">Surname</label>
                 <input type="text" class="form-control" id="InputSurname" placeholder="Enter Surname">
             </div>
-            {{-- --Birthday-- --}}
+
+            {{-- Birthday --}}
             <div class="form-group">
-                <label>Birthday</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                    </div>
-                    <input type="date" class="form-control" id="InputBirthday" placeholder="dd-mm-yyyy">
+                <label for="InputBirthday">Birthday</label>
+                <input type="date" class="form-control" id="InputBirthday">
+            </div>
+
+            {{-- Age --}}
+            <div class="form-group">
+                <label for="InputAge">Age</label>
+                <input type="number" class="form-control" id="InputAge" placeholder="Enter Age" min="0" max="100">
+            </div>
+
+            {{-- Sex --}}
+            <div class="form-group">
+                <label>Sex</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sex" id="man">
+                    <label class="form-check-label" for="man">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sex" id="woman">
+                    <label class="form-check-label" for="woman">Female</label>
                 </div>
             </div>
-            {{-- --Age-- --}}
+
+            {{-- Picture --}}
             <div class="form-group">
-                <label>Age</label>
-                <input type="number" class="form-control" id="InputAge" placeholder="Enter Age" min="0"
-                    max="100">
+                <label for="InputFile">Picture</label>
+                <input type="file" class="form-control-file" id="InputFile">
             </div>
-            {{-- --Sex-- --}}
+
+            {{-- Address --}}
             <div class="form-group">
-                <label>Sex</label><br />
-                <input id="man" type="radio" name="same-radio" />&nbsp
-                <label><b class="CO">Male</b></label>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
-                <input id="girl" type="radio" name="same-radio" />&nbsp
-                <label><b class="CO"> Female</b></label>
+                <label for="InputAddress">Address</label>
+                <textarea class="form-control" id="InputAddress" rows="3" placeholder="Enter your address"></textarea>
             </div>
-            {{-- --Picture-- --}}
+
+            {{-- Favorite Color --}}
             <div class="form-group">
-                <label for="exampleInputFile">Picture</label>
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="InputFile">
-                        <label class="custom-file-label">Choose file</label>
-                    </div>
-                </div>
-            </div>
-            {{-- --Address-- --}}
-            <div class="form-group">
-                <label>Address</label>
-                <textarea class="form-control" rows="3" placeholder="Enter your address"></textarea>
-            </div>
-            {{-- --Favorite Color-- --}}
-            <div class="form-group">
-                <label>Favorite Color</label>
-                <select class="form-control select2" style="width: 100%;">
-                    <option selected="selected">-</option>
+                <label for="InputColor">Favorite Color</label>
+                <select class="form-control" id="InputColor">
+                    <option>-</option>
                     <option>Blue</option>
                     <option>Purple</option>
                     <option>Pink</option>
@@ -71,48 +111,47 @@
                     <option>Orange</option>
                 </select>
             </div>
-            {{-- --Favourite Song Type-- --}}
-            <div class="form-group">
-                <label>Favourite Song Type</label><br />
-                <input id="R&B" type="radio" name="same-radio" />&nbsp
-                <label><b class="CO">R&B</b></label>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
-                <input id="Rock" type="radio" name="same-radio" />&nbsp
-                <label><b class="CO"> Rock</b></label>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
-                <input id="Pop" type="radio" name="same-radio" />&nbsp
-                <label><b class="CO"> Pop</b></label>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
-                <input id="Punk" type="radio" name="same-radio" />&nbsp
-                <label><b class="CO"> Punk</b></label>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
-                <input id="Other" type="radio" name="same-radio" />&nbsp
-                <label><b class="CO"> Other</b></label>
-            </div>
-            {{-- --Phone_Number-- --}}
-            <div class="form-group">
-                <label>Phone Number</label>
 
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                    </div>
-                    <input type="text" class="form-control" data-inputmask='"Mask": "(999) 999-9999"' data-mask>
+            {{-- Favourite Song Type --}}
+            <div class="form-group">
+                <label>Favourite Song Type</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="songType" id="R&B">
+                    <label class="form-check-label" for="R&B">R&B</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="songType" id="Rock">
+                    <label class="form-check-label" for="Rock">Rock</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="songType" id="Pop">
+                    <label class="form-check-label" for="Pop">Pop</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="songType" id="Punk">
+                    <label class="form-check-label" for="Punk">Punk</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="songType" id="Other">
+                    <label class="form-check-label" for="Other">Other</label>
                 </div>
             </div>
 
-            {{-- --Check-- --}}
+            {{-- Phone Number --}}
+            <div class="form-group">
+                <label for="InputPhone">Phone Number</label>
+                <input type="text" class="form-control" id="InputPhone" placeholder="Enter Phone Number">
+            </div>
+
+            {{-- Consent --}}
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Consent to collect personal information</label>
             </div>
-
         </div>
 
         <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </form>
-
-
 @endsection

@@ -15,12 +15,56 @@
     <link rel="stylesheet" href="{{ url('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ url('assets/dist/css/adminlte.min.css') }}">
+    <style>
+    body {
+        background-color: #ffffff;
+    }
+
+    /* เปลี่ยนสีของปุ่ม Register */
+.btn-primary {
+    background-color: #56e90c;
+    border-color: #56e90c;
+    color: #ffffff; /* เพิ่มสีของตัวอักษรเป็นสีขาว */
+}
+
+/* เปลี่ยนสีของปุ่ม Register เมื่อเม้าส์ hover */
+.btn-primary:hover {
+    background-color: #3da60c;
+    border-color: #3da60c;
+    color: #ffffff; /* เพิ่มสีของตัวอักษรเป็นสีขาว */
+}
+
+/* เปลี่ยนสีของปุ่ม Register เมื่อกด */
+.btn-primary:active {
+    background-color: #2c7e08;
+    border-color: #2c7e08;
+    color: #ffffff; /* เพิ่มสีของตัวอักษรเป็นสีขาว */
+}
+
+/* ปรับสีของข้อความเมื่อมี error */
+.is-invalid .form-control {
+    border-color: #dc3545;
+    color: #ffffff; /* เพิ่มสีของตัวอักษรเป็นสีขาว */
+}
+
+/* ปรับสีของลิงก์ */
+.text-center a {
+    color: #ffffff; /* เปลี่ยนสีของลิงก์เป็นสีขาว */
+}
+
+/* ปรับสีของตัวอักษรในปุ่มลงชื่อเข้าใช้ผ่านช่องทางต่าง ๆ */
+.social-auth-links .btn {
+    color: #ffffff; /* เปลี่ยนสีของตัวอักษรในปุ่มลงชื่อเข้าใช้เป็นสีขาว */
+}
+
+
+    </style>
 </head>
 
 <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
+            <a href="../../index2.html"><b>SE</b>CAMP</a>
         </div>
 
         <div class="card">
@@ -83,6 +127,22 @@
                         </div>
                         <!-- /.col -->
                     </div>
+                    <div class="social-auth-links text-center mb-3">
+                        <p>- OR -</p>
+                        <a href="#" class="btn btn-block btn-primary">
+                            <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                        </a>
+                        <a href="#" class="btn btn-block btn-danger">
+                            <i class="fab fa-google mr-2"></i> Sign in using Google
+                        </a>
+                        <a href="#" class="btn btn-block btn-info">
+                            <i class="fab fa-twitter mr-2"></i> Sign in using Twitter
+                        </a>
+                        <a href="#" class="btn btn-block btn-warning">
+                            <i class="fab fa-instagram mr-2"></i> Sign in using Instagram
+                        </a>
+                    </div>
+
                 </form>
 
                 <a href="login" class="text-center">I already have a membership</a>

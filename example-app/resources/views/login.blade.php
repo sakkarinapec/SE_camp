@@ -7,25 +7,82 @@
     <title>AdminLTE 3 | Log in</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ url('assets/plugins/fontawesome-free/css/all.min.css') }}">
-    <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="{{ url('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ url('assets/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <!-- AdminLTE App -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* เพิ่มสีพื้นหลัง */
+        body {
+            background-color: #00576f;
+        }
+
+        /* ปรับขนาดของ login-box */
+        .login-box {
+            margin-top: 80px;
+            width: 400px;
+        }
+
+        /* ปรับขนาดของ login-logo */
+        .login-logo {
+            font-size: 40px;
+        }
+
+        /* เปลี่ยนสีของปุ่ม Sign In */
+        .btn-primary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        /* เปลี่ยนสีของปุ่ม Sign In เมื่อเม้าส์ hover */
+        .btn-primary:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+
+        /* เปลี่ยนสีของปุ่ม Sign In เมื่อกด */
+        .btn-primary:active {
+            background-color: #3e8e41;
+            border-color: #3e8e41;
+        }
+
+        /* เปลี่ยนสีของ social-auth-links */
+        .social-auth-links .btn {
+            margin-bottom: 10px;
+        }
+
+        /* เปลี่ยนสีของ social-auth-links */
+        .social-auth-links .btn-primary {
+            background-color: #3b5998;
+            border-color: #3b5998;
+        }
+
+        /* เปลี่ยนสีของ social-auth-links เมื่อเม้าส์ hover */
+        .social-auth-links .btn-primary:hover {
+            background-color: #2d4373;
+            border-color: #2d4373;
+        }
+
+        /* เปลี่ยนสีของ social-auth-links เมื่อกด */
+        .social-auth-links .btn-primary:active {
+            background-color: #1d2d4a;
+            border-color: #1d2d4a;
+        }
+    </style>
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
+            <a href="../../index2.html"><b>SE</b>Camp</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
 
                 <form action="{{ url('login') }}" method="post">
                     @csrf
@@ -86,11 +143,11 @@
     <!-- /.login-box -->
 
     <!-- jQuery -->
-    <script src="{{ url('assets/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="{{ url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="{{ url('assets/dist/js/adminlte.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/js/adminlte.min.js"></script>
 </body>
 
 </html>
